@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter_Tight, Cormorant_Garamond, Italianno } from "next/font/google";
 // import AudioPlayer from "@/components/AudioPlayer";
 import "./globals.css";
+import ParallaxProvider from "../components/ParallaxProvider";
 
 const interTight = Inter_Tight({
   variable: "--font-inter-tight",
@@ -42,7 +43,9 @@ export default function RootLayout({
     >
       <body className="bg-black">
         {/* <AudioPlayer /> */}
-        {children}
+        <ParallaxProvider>
+          {children}
+        </ParallaxProvider>
       </body>
     </html>
   );

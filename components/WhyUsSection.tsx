@@ -94,6 +94,8 @@ function StatCard({
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       className="relative flex flex-col justify-between p-7 sm:p-9 overflow-hidden"
+      data-parallax
+      data-parallax-speed="0.04"
       style={{
         background: isDark
           ? "white"

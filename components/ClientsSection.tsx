@@ -66,7 +66,7 @@ export default function ClientsSection({ onOpenContact }: ClientsSectionProps) {
                 letterSpacing: "-0.025em",
               }}
             >
-              A focused portfolio
+              Focused portfolio
               <br />
               <span
                 className="italic font-light"

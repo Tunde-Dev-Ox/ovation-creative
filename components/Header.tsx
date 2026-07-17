@@ -67,7 +67,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
           <button
             type="button"
             onClick={onOpenContact}
-            className="hidden md:inline-flex items-center px-6 py-2.5 text-[13px] font-bold text-white bg-transparent border-[1.5px] border-white/30 hover:border-white transition-all duration-300 uppercase tracking-[0.15em] rounded-sm"
+            className="hidden md:inline-flex items-center px-6 py-2.5 text-[13px] font-bold text-white bg-transparent border-[1.5px] border-white/30 hover:border-white transition-all duration-300 uppercase tracking-[0.15em] rounded-sm cursor-pointer"
           >
             Get in touch
           </button>
@@ -105,7 +105,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
                 setOpen(false);
                 onOpenContact();
               }}
-              className="inline-flex w-full items-center justify-center rounded-sm bg-brand px-7 py-4 text-sm font-bold uppercase tracking-[0.15em] text-black transition-all duration-300 hover:bg-white/90"
+              className="inline-flex w-full items-center justify-center rounded-sm bg-brand px-7 py-4 text-sm font-bold uppercase tracking-[0.15em] text-black transition-all duration-300 hover:bg-white/90 cursor-pointer"
             >
               Get in touch
             </button>

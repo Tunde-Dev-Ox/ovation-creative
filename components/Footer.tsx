@@ -6,7 +6,7 @@ import { MdArrowOutward } from "react-icons/md";
 import {FaInstagram} from 'react-icons/fa';
 
 const navLinks = [
-  { label: "Work", href: "#work" },
+  { label: "Work", href: "#clients" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Contact", href: "#contact" },

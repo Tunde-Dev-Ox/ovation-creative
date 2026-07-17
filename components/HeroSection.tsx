@@ -44,8 +44,10 @@ export default function HeroSection({ onOpenContact }: HeroSectionProps) {
         loop
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
+        data-parallax
+        data-parallax-speed="0.18"
       >
-        <source src="https://www.pexels.com/download/video/3134579/" type="video/mp4" />
+        <source src="https://res.cloudinary.com/relostay/video/upload/v1784330957/ovation_e7kfn5.mp4" type="video/mp4" />
       </motion.video>
 
       {/* Overlays */}
@@ -59,7 +61,7 @@ export default function HeroSection({ onOpenContact }: HeroSectionProps) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.6 }}
         transition={{ duration: 1.5, delay: 0.3 }}
-        className="absolute inset-0 mix-blend-overlay opacity-5"
+        className="absolute inset-0 mix-blend-soft-light opacity-5"
         style={{
           backgroundImage: "url('/noise.png')",
           backgroundSize: "200px 200px",

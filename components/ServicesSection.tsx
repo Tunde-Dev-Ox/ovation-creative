@@ -348,7 +348,7 @@ export default function ServicesSection({ onOpenContact }: { onOpenContact: () =
             id="services-cta-start"
             type="button"
             onClick={onOpenContact}
-            className="group inline-flex items-center gap-2 px-7 py-3 text-[10px] uppercase tracking-[0.18em] font-bold transition-all duration-200 rounded-sm bg-brand text-black justify-center max-[540px]:w-[250px]"
+            className="group inline-flex items-center gap-2 px-7 py-3 text-[10px] uppercase tracking-[0.18em] font-bold transition-all duration-200 rounded-sm bg-brand text-black justify-center max-[540px]:w-[250px] cursor-pointer"
           >
             Start a Conversation
             <MdArrowOutward
