@@ -74,6 +74,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
+  const [stepError, setStepError] = useState("");
   const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -112,6 +113,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormState((prev) => ({ ...prev, [name]: value }));
+    if (stepError) setStepError("");
   };
 
   const handleMultiSelect = (option: string) => {
@@ -121,10 +123,24 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         ? prev.helpWith.filter((o) => o !== option)
         : [...prev.helpWith, option],
     }));
+    setError("");
+  };
+
+  const handleNext = () => {
+    if (!formState.fullName.trim() || !formState.email.trim() || !formState.describe) {
+      setStepError("Please fill in all required fields before continuing.");
+      return;
+    }
+    setStepError("");
+    setStep(2);
   };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (formState.helpWith.length === 0) {
+      setError("Please select at least one service you need help with.");
+      return;
+    }
     setSending(true);
     setError("");
 
@@ -305,10 +321,11 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         </select>
                       </label>
 
-                      <div className="flex justify-end pt-2">
+                      <div className="flex flex-col items-end gap-2 pt-2">
+                        {stepError && <p className="text-xs text-red-500">{stepError}</p>}
                         <button
                           type="button"
-                          onClick={() => setStep(2)}
+                          onClick={handleNext}
                           className="inline-flex items-center gap-2 rounded-sm bg-black px-8 py-3 text-sm font-bold uppercase tracking-[0.15em] text-white transition hover:bg-black/90 cursor-pointer"
                         >
                           Next <MdArrowForward />
