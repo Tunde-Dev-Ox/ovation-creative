@@ -22,23 +22,18 @@ const revealClip = (delay = 0) => ({
 });
 
 function useCountUpStat(stat: string, active: boolean) {
+  const trimmed = stat.trim();
+  const suffix = trimmed.endsWith("%") ? "%" : trimmed.endsWith("+") ? "+" : "";
+  const target = parseFloat(trimmed);
+  const isNumeric = !Number.isNaN(target);
+
   const [display, setDisplay] = useState(() => {
-    const trimmed = stat.trim();
-    const suffix = trimmed.endsWith("%") ? "%" : trimmed.endsWith("+") ? "+" : "";
-    return `0${suffix}`;
+    return isNumeric ? `0${suffix}` : stat;
   });
   const hasAnimated = useRef(false);
 
   useEffect(() => {
-    if (!active || hasAnimated.current) return;
-
-    const trimmed = stat.trim();
-    const suffix = trimmed.endsWith("%") ? "%" : trimmed.endsWith("+") ? "+" : "";
-    const target = parseFloat(trimmed);
-    if (Number.isNaN(target)) {
-      setDisplay(stat);
-      return;
-    }
+    if (!active || hasAnimated.current || !isNumeric) return;
 
     const decimals = trimmed.includes(".") ? trimmed.split(".")[1].length : 0;
     const duration = 1500;
@@ -63,7 +58,7 @@ function useCountUpStat(stat: string, active: boolean) {
 
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [active, stat]);
+  }, [active, isNumeric, suffix, target, trimmed]);
 
   return display;
 }
