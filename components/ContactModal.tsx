@@ -145,7 +145,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     setError("");
 
     try {
-      const res = await fetch("https://formspree.io/f/xojgeoev", {
+      const res = await fetch("https://formspree.io/f/mlgqbdww", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formState),
