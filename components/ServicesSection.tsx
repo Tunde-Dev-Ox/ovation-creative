@@ -88,8 +88,24 @@ const SERVICES = [
       "Whether it's a concert, recital, festival, workshop, or tour, we help your message reach the people who matter most.",
   },
   {
-    id: "creative-consultancy",
+    id: "website-development",
     number: "06",
+    title: "Website Development",
+    description:
+      "Your online presence begins with your website. We create unique, professional websites that reflect your brand and help you connect with your audience.",
+    details: [
+      "Website design for choirs, artists, and other creative organizations.",
+      "Website development and optimization",
+      "Website maintenance and updates",
+    ],
+    leftDescription:
+      "Your online presence begins with your website. We create unique, professional websites that reflect your brand and help you connect with your audience.",
+    rightDescription:
+      "A great website should be beautiful, easy to navigate, tell your story, and optimized for performance. We build websites for choirs, artists, ministries, churches, and other creative organizations. Whether you need a brand new website or a refresh of your current one, we can help you create a website that reflects your unique voice and vision.",
+  },
+  {
+    id: "creative-consultancy",
+    number: "07",
     title: "Creative Consultancy",
     description:
       "We optimize your digital presence to ensure you're discovered by the right audience through search engines and organic channels.",
