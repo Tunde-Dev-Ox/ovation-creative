@@ -35,7 +35,7 @@ export default function HeroSection({ onOpenContact }: HeroSectionProps) {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-surface">
       {/* Video background */}
-      <motion.video
+      {/* <motion.video
         initial={{ scale: 1.1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
@@ -48,8 +48,15 @@ export default function HeroSection({ onOpenContact }: HeroSectionProps) {
         data-parallax-speed="0.18"
       >
         <source src="https://res.cloudinary.com/relostay/video/upload/v1784330957/ovation_e7kfn5.mp4" type="video/mp4" />
-      </motion.video>
-
+      </motion.video> */}
+      <motion.img
+        initial={{ scale: 1.1, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
+        src="/hero.jpg"
+        alt="Hero Background"
+        className="absolute inset-0 w-full h-full object-cover"
+      />  
       {/* Overlays */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -106,14 +113,6 @@ export default function HeroSection({ onOpenContact }: HeroSectionProps) {
             <span className="relative z-10 text-white transition-colors duration-300">Get in Touch</span>
           </button>
         </motion.div>
-
-        {/* Watermark */}
-        {/* <motion.span
-          variants={fadeIn}
-          className="hidden lg:block font-[family-name:var(--font-cormorant)] text-5xl text-brand/20 absolute -right-16 bottom-0 -rotate-12 select-none pointer-events-none"
-        >
-          Ovation studio
-        </motion.span> */}
       </motion.div>
     </section>
   );

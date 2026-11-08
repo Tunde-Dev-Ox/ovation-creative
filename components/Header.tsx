@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -39,6 +40,15 @@ export default function Header({ onOpenContact }: HeaderProps) {
           <span className="block text-[10px] text-white/90 uppercase tracking-[0.2em] font-medium mt-0.5">
             Creative Studios
           </span>
+          {/* <span className="text-2xl font-bold text-white font-cormorant leading-none tracking-wide">
+            <Image 
+              src="/logo.jpg"
+              alt="Ovation Creative Studios Logo"
+              width={150}
+              height={50}
+              className="object-contain"
+            />
+          </span> */}
         </Link>
 
         <nav className="hidden md:flex items-center gap-x-6">

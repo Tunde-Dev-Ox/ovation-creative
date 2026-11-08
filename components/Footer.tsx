@@ -15,7 +15,7 @@ const navLinks = [
 function NavColumn() {
   return (
     <div>
-      <span className="block text-[12px] text-black uppercase tracking-[0.22em] font-semibold mb-5">
+      <span className="block text-[12px] uppercase tracking-[0.22em] font-semibold mb-5">
         Navigation
       </span>
       <ul className="space-y-3">
@@ -23,7 +23,7 @@ function NavColumn() {
           <li key={link.label}>
             <Link
               href={link.href}
-              className="group inline-flex items-center gap-2 text-sm text-black/80 hover:text-black transition-colors duration-300"
+              className="group inline-flex items-center gap-2 text-sm hover:text-white/90 transition-colors duration-300"
             >
               {link.label}
             </Link>
@@ -37,14 +37,14 @@ function NavColumn() {
 function ContactColumn() {
   return (
     <div>
-      <span className="block text-[12px] text-black uppercase tracking-[0.22em] font-semibold mb-5">
+      <span className="block text-[12px] uppercase tracking-[0.22em] font-semibold mb-5">
         Contact
       </span>
       <ul className="space-y-3">
         <li>
           <a
             href="mailto:ovationcreativestudios@gmail.com"
-            className="text-sm text-black/80 hover:text-black transition-colors duration-300"
+            className="text-sm text-white/80 hover:text-white transition-colors duration-300"
           >
             Email us
           </a>
@@ -54,7 +54,7 @@ function ContactColumn() {
             href="https://wa.me/2347063139322"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-black/80 hover:text-black transition-colors duration-300"
+            className="text-sm text-white/80 hover:text-white transition-colors duration-300"
           >
             WhatsApp
           </a>
@@ -75,7 +75,7 @@ function BackToTop() {
       onClick={scrollToTop}
       whileHover={{ y: -2 }}
       whileTap={{ scale: 0.9 }}
-      className="group flex items-center gap-2 text-[10px] text-black/80 uppercase tracking-[0.2em] font-medium transition-colors duration-300 cursor-pointer"
+      className="group flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-medium transition-colors duration-300 cursor-pointer"
     >
       Back to top
       <span className="inline-block transition-transform duration-300 group-hover:-translate-y-0.5">
@@ -91,7 +91,7 @@ interface FooterProps {
 
 export default function Footer({ onOpenContact }: FooterProps) {
   return (
-    <footer id="footer" className="relative w-full overflow-hidden bg-brand border-t border-white/5">
+    <footer id="footer" className="relative w-full overflow-hidden bg-black text-white border-t border-white/5">
       {/* Noise overlay */}
       <div
         aria-hidden
@@ -106,7 +106,7 @@ export default function Footer({ onOpenContact }: FooterProps) {
       {/* Decorative "O" watermark */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-20 -right-20 lg:-right-10 select-none text-[300px] lg:text-[500px] font-(family-name:--font-cormorant) text-black/80 leading-none font-bold"
+        className="pointer-events-none absolute -top-20 -right-20 lg:-right-10 select-none text-[300px] lg:text-[500px] font-(family-name:--font-cormorant) leading-none font-bold"
       >
         O
       </div>
@@ -116,14 +116,14 @@ export default function Footer({ onOpenContact }: FooterProps) {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 pb-12 border-b border-white/6">
           <div className="max-w-md">
             <Link href="/" className="inline-block group">
-              <span className="text-3xl font-semibold text-black font-(family-name:--font-cormorant) tracking-wide leading-none">
+              <span className="text-3xl font-semibold font-(family-name:--font-cormorant) tracking-wide leading-none">
                 Ovation
               </span>
-              <span className="block text-[10px] text-black/80 uppercase tracking-[0.2em] font-medium mt-1">
+              <span className="block text-[10px] uppercase tracking-[0.2em] font-medium mt-1">
                 Creative Studios
               </span>
             </Link>
-            <p className="mt-4 text-sm text-black leading-relaxed max-w-xs">
+            <p className="mt-4 text-sm leading-relaxed max-w-xs">
               A creative communications studio helping choirs, music ministries, artistes, and arts organizations tell their stories with excellence.
             </p>
           </div>
@@ -148,17 +148,17 @@ export default function Footer({ onOpenContact }: FooterProps) {
           <NavColumn />
           <ContactColumn />
           <a href="https://instagram.com/ovation_studios1" target="_blank" rel="noopener noreferrer" className="col-span-2 lg:col-span-1 flex">
-            <FaInstagram className="text-black text-2xl" />
+            <FaInstagram className="text-2xl" />
           </a>
         </div>
 
         {/* ── Bottom bar ── */}
         <div className="pt-8 border-t border-white/6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[10px] text-black uppercase tracking-[0.15em]">
+          <p className="text-[10px] uppercase tracking-[0.15em]">
             &copy; {new Date().getFullYear()} Ovation Creative Studios. All rights reserved.
           </p>
           <div className="flex items-center gap-1">
-            <span className="text-[10px] text-black/80 uppercase tracking-[0.15em] font-semibold">Developed by </span><a className="text-[10px] text-black hover:text-black/80 uppercase tracking-[0.15em] font-semibold transition-colors duration-300 underline" href="https://x.com/real__jot" target="_blank" rel="noopener noreferrer">JOT</a>
+            <span className="text-[10px] text-white/80 uppercase tracking-[0.15em] font-semibold">Developed by </span><a className="text-[10px] text-white hover:text-white/80 uppercase tracking-[0.15em] font-semibold transition-colors duration-300 underline" href="https://x.com/real__jot" target="_blank" rel="noopener noreferrer">JOT</a>
           </div>
         </div>
       </div>

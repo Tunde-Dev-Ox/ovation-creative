@@ -10,19 +10,19 @@ const CLIENT_CASES = [
     name: "Lagos Cathedral Choir",
     tagline: "Choir brand refresh + concert campaign",
     result: "Boosted concert attendance by 68% with refreshed visuals, messaging, and targeted audience outreach.",
-    website: "https://lagoscathedralchoir.example.com",
+    website: "/",
   },
   {
     name: "Harmony Choral Society",
     tagline: "Season launch identity + digital storytelling",
     result: "Helped the society present a compelling season narrative that increased donor engagement and ticket inquiries.",
-    website: "https://harmonychoralsociety.example.com",
+    website: "/",
   },
   {
     name: "New Life Music Ministry",
     tagline: "Ministry outreach and event promotion",
     result: "Built a high-impact launch experience that strengthened community connection and advanced event visibility.",
-    website: "https://newlifemusicministry.example.com",
+    website: "/",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function ClientsSection({ onOpenContact }: ClientsSectionProps) {
     <section id="clients" ref={ref} className="relative w-full bg-white">
       <div className="absolute top-0 left-0 right-0 h-px bg-[rgba(255,255,255,0.06)]" aria-hidden />
 
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 pt-20 pb-10">
+      <div className="max-w-350 mx-auto px-6 sm:px-10 lg:px-16 pt-20 pb-10">
         <motion.div
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
           initial="hidden"
@@ -81,23 +81,6 @@ export default function ClientsSection({ onOpenContact }: ClientsSectionProps) {
               </span>
             </motion.h2>
           </div>
-
-          <motion.div variants={fadeUp(0.15)} className="flex flex-col gap-3 text-black">
-            <p
-              className="font-black leading-none"
-              style={{
-                fontFamily: "var(--font-inter-tight)",
-                fontSize: "clamp(2.4rem, 5vw, 4rem)",
-                letterSpacing: "-0.03em",
-              }}
-            >
-              3+
-              <span className="ml-2 text-sm uppercase tracking-[0.2em] font-semibold text-black/60">active clients</span>
-            </p>
-            <p className="max-w-md text-[10px] uppercase tracking-[0.15em] font-medium text-black/55">
-              Small, curated partnerships that get more attention, stronger strategy, and measurable impact.
-            </p>
-          </motion.div>
         </motion.div>
       </div>
 
