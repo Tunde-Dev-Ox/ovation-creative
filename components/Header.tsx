@@ -44,9 +44,9 @@ export default function Header({ onOpenContact }: HeaderProps) {
             <Image 
               src="/logo.jpg"
               alt="Ovation Creative Studios Logo"
-              width={150}
+              width={50}
               height={50}
-              className="object-contain"
+              className="object-contain brightness-[0] invert-[1] contrast-[0.8]"
             />
           </span> */}
         </Link>

@@ -7,21 +7,9 @@ import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
 const TESTIMONIALS = [
   {
     quote:
-      "Working with Ovation Studios felt like working with a small, dedicated team that truly understood our ministry. They distilled our story into a campaign that moved our audience and helped us sell out our launch event.",
-    name: "Rai Mehta",
-    role: "CTO, Lagos Cathedral Choir",
-  },
-  {
-    quote:
-      "The clarity they brought to our season messaging was a game changer. We launched with confidence, and the results showed immediately in ticket inquiries and community engagement.",
-    name: "Aisha Bello",
-    role: "Marketing Director, Harmony Choral Society",
-  },
-  {
-    quote:
-      "They listened to who we are and translated it into a campaign that felt authentic. The launch experience they built helped our music ministry connect with more families than ever before.",
-    name: "Daniel Okafor",
-    role: "Founder, New Life Music Ministry",
+      "Working with Ovation Studios felt like working with a small, dedicated team that truly understood our ministry. They distilled our story into a campaign that moved our audience and helped us sell our concerts.",
+    name: "Mr. Johnson Adejare",
+    role: "Director of Music, BAHM Church",
   },
 ];
 

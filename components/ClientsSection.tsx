@@ -7,22 +7,10 @@ import { MdArrowOutward } from "react-icons/md";
 
 const CLIENT_CASES = [
   {
-    name: "Lagos Cathedral Choir",
+    name: "B.A.H.M Church Choir",
     tagline: "Choir brand refresh + concert campaign",
     result: "Boosted concert attendance by 68% with refreshed visuals, messaging, and targeted audience outreach.",
-    website: "/",
-  },
-  {
-    name: "Harmony Choral Society",
-    tagline: "Season launch identity + digital storytelling",
-    result: "Helped the society present a compelling season narrative that increased donor engagement and ticket inquiries.",
-    website: "/",
-  },
-  {
-    name: "New Life Music Ministry",
-    tagline: "Ministry outreach and event promotion",
-    result: "Built a high-impact launch experience that strengthened community connection and advanced event visibility.",
-    website: "/",
+    website: "https://www.instagram.com/bahmchoir?exln=MWVrOXh6NG01ODMwbQ==",
   },
 ];
 
